@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  	<title>Gallery</title>
+
+    <!-- build:js js/app.min.js -->
+  	<script src="../closure-library/closure/goog/base.js"></script>
+  	<script src="js/gallery.js"></script>   
+    <!-- /build -->
+
+  	<link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div id="main"></div>
+
+    <button onclick="showGallery()">Show Gallery</button>
+  </body>
+
+  <script>
+      function showGallery() {
+        var photos = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg', 'img/5.jpg', 'img/6.jpg', 'img/7.jpg'];
+        var mainRegion = document.getElementById('main');
+
+        var gallery = new my.gallery.Gallery(photos, mainRegion);
+    }
+  </script>
+
+</html>
