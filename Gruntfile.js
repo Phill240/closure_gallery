@@ -12,6 +12,17 @@ module.exports = function(grunt) {
 	    	},
   		},
 
+  		closureSoys: {
+      		all: {
+		        src: 'src/js/*.soy',
+		        soyToJsJarPath: 'libs/SoyToJsSrcCompiler.jar',
+		        options: {
+		          	shouldGenerateJsdoc: true,
+		          	shouldProvideRequireSoyNamespaces: true
+		        }
+      		}
+    	},
+
 	    closureBuilder:  {
 		  	options: {
 			    closureLibraryPath: 'closure-library',
@@ -69,6 +80,7 @@ module.exports = function(grunt) {
   	grunt.loadNpmTasks('grunt-processhtml');
   	grunt.loadNpmTasks('grunt-sass');
   	grunt.loadNpmTasks('grunt-contrib-imagemin');
+  	grunt.loadNpmTasks('grunt-closure-soy');
 
-  	grunt.registerTask('default', ['clean', 'mkdir', 'processhtml', 'closureBuilder', 'sass', 'imagemin']);
+  	grunt.registerTask('default', ['clean', 'mkdir', 'processhtml', 'closureSoys', 'closureBuilder', 'sass', 'imagemin']);
 }

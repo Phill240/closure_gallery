@@ -1,0 +1,25 @@
+{namespace my.gallery.templates}
+
+/**
+ * Photo template
+ * @param url
+ */
+{template .photoView}
+	<div class="gallery-photo">
+		<div class="gallery-photo__img" style="background-image: url('{$url}');"></div>
+	</div>
+{/template}
+
+/**
+ * Gallery main template
+ */
+{template .mainView}
+	<div class="gallery-frame">	</div>
+{/template}
+
+/**
+ * Slider template
+ */
+{template .sliderView}
+	<div class="gallery-slider"> </div>
+{/template}

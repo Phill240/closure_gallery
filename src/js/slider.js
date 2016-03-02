@@ -29,7 +29,7 @@ my.gallery.Slider = function(urls, region) {
 }
 
 my.gallery.Slider.prototype.setSlider = function() {
-  this.slider = goog.dom.createDom('div', {'class': 'gallery-slider'}); 
+  this.slider = soy.renderAsFragment(my.gallery.templates.sliderView);
   goog.dom.appendChild(this.region, this.slider);
 
   this.dragger = new goog.fx.Dragger(this.slider);

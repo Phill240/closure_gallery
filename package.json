@@ -4,6 +4,7 @@
   "description": "Simple gallery based on Google Closure Library",
   "devDependencies": {
     "grunt": "latest",
+    "grunt-closure-soy": "^0.2.1",
     "grunt-closure-tools": "^0.9.9",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-imagemin": "^1.0.0",
